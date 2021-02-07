@@ -25,7 +25,7 @@
 - to-do-app/ - project folder - root of project, main.js, .env, .gitignore, package.json etc goes here
   - models/ - schemas goes here
   - public/ - styles-folder goes here
-    styles/ - compiled .css-files and scss-folder goes here
-      scss/ - styling with file ending .scss goes here
+    - styles/ - compiled .css-files and scss-folder goes here
+      - scss/ - styling with file ending .scss goes here
   - routes/ - all routes for to-do-app goes here
   - views/ - all EJS-files goes here
