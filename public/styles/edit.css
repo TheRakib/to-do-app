@@ -61,7 +61,7 @@ html, body {
         html .inputContainer form button:hover, body .inputContainer form button:hover {
           color: lightgrey; }
   html .todoContainer, body .todoContainer {
-    margin-top: 70px;
+    margin-top: 75px;
     display: flex;
     flex-direction: column;
     align-items: center;
