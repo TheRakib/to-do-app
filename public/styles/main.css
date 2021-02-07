@@ -102,3 +102,30 @@ html, body {
           padding-bottom: 3px; }
         html .todoContainer .todoList .todoItem .remIcon, body .todoContainer .todoList .todoItem .remIcon {
           font-size: 1em; }
+  html .pagContainer, body .pagContainer {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-top: 15px; }
+    html .pagContainer .pagination, body .pagContainer .pagination {
+      display: flex;
+      justify-content: center;
+      width: 75%;
+      list-style: none; }
+      html .pagContainer .pagination .active, body .pagContainer .pagination .active {
+        color: rgba(51, 51, 51, 0.445);
+        border: 1px solid rgba(51, 51, 51, 0.445);
+        padding: 3px 8px;
+        margin: 0 5px; }
+        html .pagContainer .pagination .active a, body .pagContainer .pagination .active a {
+          text-decoration: none; }
+      html .pagContainer .pagination .pageBtn, body .pagContainer .pagination .pageBtn {
+        text-decoration: none;
+        border: 1px solid rgba(51, 51, 51, 0.445);
+        padding: 3px 8px;
+        margin: 0 5px; }
+        html .pagContainer .pagination .pageBtn a, body .pagContainer .pagination .pageBtn a {
+          color: #f0f0f0;
+          text-decoration: none; }
+        html .pagContainer .pagination .pageBtn:hover, body .pagContainer .pagination .pageBtn:hover {
+          background-color: rgba(110, 110, 110, 0.445); }

@@ -129,4 +129,45 @@ html, body {
             }
         }
     }
+    
+    .pagContainer {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        margin-top: 15px;
+
+        .pagination {
+            display: flex;
+            justify-content: center;
+            width: 75%;
+            list-style: none;
+
+            .active {
+                color: rgba(51, 51, 51, 0.445);
+                border: 1px solid rgba(51, 51, 51, 0.445);
+                padding: 3px 8px;
+                margin: 0 5px;
+    
+                a {
+                    text-decoration: none;
+                }
+            }
+    
+            .pageBtn {
+                text-decoration: none;
+                border: 1px solid rgba(51, 51, 51, 0.445);
+                padding: 3px 8px;
+                margin: 0 5px;
+    
+                a {
+                    color: rgb(240, 240, 240);
+                    text-decoration: none;
+                }
+    
+                &:hover {
+                    background-color: rgba(110, 110, 110, 0.445);
+                }
+            }
+        }
+    }
 }

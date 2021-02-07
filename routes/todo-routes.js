@@ -6,9 +6,23 @@ const router = express.Router();
 
 
 router.get("/", async (req, res) => {
-    const todos = await ToDo.find();
+    res.redirect("/1");
+});
 
-    res.render("index.ejs", {data: todos});
+
+router.get("/:page", async (req, res) => {
+    let limit = 7;
+    let page = req.params.page || 1;
+
+    try {
+        const todos = await ToDo.find().skip((limit * page) - limit).limit(limit);
+        const count = await ToDo.countDocuments();
+
+        res.render("index.ejs", {data: todos, totalPages: Math.ceil(count / limit), currentPage: page});
+    }
+    catch (err) {
+        console.log(err);
+    }
 });
 
 
@@ -16,7 +30,7 @@ router.post("/", async (req, res) => {
     const task = new ToDo ({name: req.body.content});
 
     await task.save();
-    
+
     res.redirect("/");
 });
 
