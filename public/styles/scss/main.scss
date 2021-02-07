@@ -74,6 +74,35 @@ html, body {
         }
     }
 
+    .sortContainer {
+        width: 80%;
+        display: flex;
+        justify-content: space-between;
+        margin-top: 55px;
+        margin-bottom: 5px;
+        color: grey;
+        font-size: 0.7em;
+        @media screen and (min-width: 768px) {
+            width: 62%;
+            margin-top: 80px;
+        }
+        @media screen and (min-width: 1024px) {
+            width: 52%;
+            margin-top: 50px;
+        }
+
+        .sort {
+            color: rgb(58, 58, 58);
+            font-size: 1.1em;
+            text-transform: uppercase;
+            text-decoration: none;
+
+            &:hover {
+                color: rgb(240, 240, 240);
+            }
+        }
+    }
+
     .todoContainer {
         display: flex;
         flex-direction: column;
@@ -129,7 +158,7 @@ html, body {
             }
         }
     }
-    
+
     .pagContainer {
         display: flex;
         justify-content: center;

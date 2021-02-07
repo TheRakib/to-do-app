@@ -13,9 +13,20 @@ router.get("/", async (req, res) => {
 router.get("/:page", async (req, res) => {
     let limit = 7;
     let page = req.params.page || 1;
+    
+    let sortDate = req.query.sortDate;
+    let sortAZ = req.query.sortAZ;
+    let sort = {}
+
+    if (sortDate) {
+        sort.created = sortDate;
+    } 
+    else if (sortAZ) {
+        sort.name = sortAZ;
+    }
 
     try {
-        const todos = await ToDo.find().skip((limit * page) - limit).limit(limit);
+        const todos = await ToDo.find().collation({locale: "en"}).sort(sort).skip((limit * page) - limit).limit(limit);
         const count = await ToDo.countDocuments();
 
         res.render("index.ejs", {data: todos, totalPages: Math.ceil(count / limit), currentPage: page});
