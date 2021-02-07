@@ -6,7 +6,9 @@
   "scripts": {
     "start": "nodemon main.js",
     "build-css": "node-sass --include-path scss public/styles/scss/main.scss public/styles/main.css",
-    "main-css": "nodemon -e scss -x \"npm run build-css\""
+    "main-css": "nodemon -e scss -x \"npm run build-css\"",
+    "build-edit-css": "node-sass --include-path scss public/styles/scss/edit.scss public/styles/edit.css",
+    "edit-css": "nodemon -e scss -x \"npm run build-edit-css\""
   },
   "author": "",
   "license": "ISC",
