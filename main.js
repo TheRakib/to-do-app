@@ -17,7 +17,8 @@ app.use("/", routes);
 app.set("view engine", "ejs");
 
 
-mongoose.connect(process.env.DB_URL, {useNewUrlParser: true, useUnifiedTopology: true}, () => {
+mongoose.connect(process.env.DB_URL, {useNewUrlParser: true, useUnifiedTopology: true}, (err) => {
+    // fånga db connection error innan man kopplas vidare till appen 
     app.listen(process.env.PORT, () => {
         console.log("Server is up and running");
     });
